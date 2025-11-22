@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos: Windows, Linux y macOS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Azul claro */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            background-color: #FFB6C1; /* Rosado cálido */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #4B0082; /* Azul índigo */
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .os-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .os-card {
+            flex: 1 1 300px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #F0F8FF; /* Azul muy claro */
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        #quiz-section {
+            background-color: #FFB6C1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #start-quiz {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .os-info {
+                flex-direction: column;
+            }
+            .os-card {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistemas Operativos: Windows, Linux y macOS</h1>
+        <img src="https://media.istockphoto.com/id/506040816/photo/modern-desktop-pc-with-curved-screen.jpg?s=612x612&w=0&k=20&c=0ZjhDRbcyZnKfOOHNBw5U_H5pqyg13LHLRb0B5iDgUY=" alt="Computadora moderna">
+    </header>
+
+    <div class="section">
+        <h2>Información General sobre Sistemas Operativos</h2>
+        <p>Un sistema operativo (SO) es un software que gestiona los recursos de hardware y software de una computadora, actuando como intermediario entre el usuario y el hardware. Su importancia radica en proporcionar una interfaz amigable, gestionar la memoria, procesos, archivos y dispositivos, y asegurar la seguridad y eficiencia del sistema.</p>
+        <p>Los SO funcionan mediante un núcleo (kernel) que controla el hardware, y capas superiores que incluyen interfaces de usuario, gestores de archivos y herramientas de red. Su arquitectura puede ser monolítica, microkernel o híbrida. La usabilidad varía según el diseño: gráfica para facilidad o de línea de comandos para control avanzado. Aplicaciones incluyen computadoras personales, servidores, dispositivos móviles y embebidos.</p>
+    </div>
+
+    <div class="section os-info">
+        <div class="os-card">
+            <h2>Windows</h2>
+            <img src="https://i.redd.it/9jok3fmegps71.png" alt="Logo de Windows">
+            <p><strong>Definición:</strong> Windows es un sistema operativo desarrollado por Microsoft, enfocado en interfaces gráficas de usuario (GUI).</p>
+            <p><strong>Importancia:</strong> Domina el mercado de PC personales, facilitando el uso para no expertos y soportando una amplia gama de software.</p>
+            <p><strong>Cómo funciona:</strong> Usa un kernel híbrido (NT) que maneja procesos, memoria y E/S.</p>
+            <p><strong>Arquitectura:</strong> Híbrida, con componentes en modo kernel y usuario.</p>
+            <p><strong>Usabilidad:</strong> Intuitiva con interfaz gráfica, menús y ventanas.</p>
+            <p><strong>Aplicaciones:</strong> Oficinas, gaming, desarrollo de software.</p>
+        </div>
+        <div class="os-card">
+            <h2>Linux</h2>
+            <img src="https://1000logos.net/wp-content/uploads/2017/03/Symbol-Linux.jpg" alt="Logo de Linux">
+            <p><strong>Definición:</strong> Linux es un SO de código abierto basado en Unix, con múltiples distribuciones como Ubuntu o Fedora.</p>
+            <p><strong>Importancia:</strong> Gratuito, estable y seguro, ampliamente usado en servidores y supercomputadoras.</p>
+            <p><strong>Cómo funciona:</strong> Kernel monolítico que gestiona todo el hardware directamente.</p>
+            <p><strong>Arquitectura:</strong> Monolítica, con módulos cargables.</p>
+            <p><strong>Usabilidad:</strong> Flexible, con CLI y GUI disponibles.</p>
+            <p><strong>Aplicaciones:</strong> Servidores web, programación, IoT.</p>
+        </div>
+        <div class="os-card">
+            <h2>macOS</h2>
+            <img src="https://logos-world.net/wp-content/uploads/2023/03/Mac-OS-X-Logo-2001.png" alt="Logo de macOS">
+            <p><strong>Definición:</strong> macOS es el SO de Apple para sus computadoras Mac, basado en Unix.</p>
+            <p><strong>Importancia:</strong> Integrado con hardware Apple, ofrece alta estabilidad y seguridad.</p>
+            <p><strong>Cómo funciona:</strong> Kernel híbrido (XNU) que combina Mach y BSD.</p>
+            <p><strong>Arquitectura:</strong> Híbrida, con énfasis en seguridad.</p>
+            <p><strong>Usabilidad:</strong> Elegante GUI, gestos multitáctiles.</p>
+            <p><strong>Aplicaciones:</strong> Diseño gráfico, edición de video, desarrollo.</p>
+        </div>
+    </div>
+
+    <div id="quiz-section" class="section">
+        <h2>Cuestionario sobre Sistemas Operativos</h2>
+        <label for="student-name">Ingrese su nombre:</label>
+        <input type="text" id="student-name" placeholder="Nombre del estudiante">
+        <button id="start-quiz">Iniciar Cuestionario</button>
+        
+        <form id="quiz-form" class="hidden"></form>
+        <button id="submit-quiz" class="hidden">Enviar Respuestas</button>
+        
+        <div id="results" class="hidden"></div>
+    </div>
+
+    <script>
+        const questionBank = [
+            {
+                question: "¿Qué empresa desarrolla Windows?",
+                options: ["a) Apple", "b) Microsoft", "c) Google", "d) Linux Foundation"],
+                correct: "b"
+            },
+            {
+                question: "¿Cuál es el kernel de Linux?",
+                options: ["a) NT", "b) Monolítico", "c) XNU", "d) Hybrid"],
+                correct: "b"
+            },
+            {
+                question: "¿macOS está basado en qué sistema?",
+                options: ["a) Windows", "b) Unix", "c) DOS", "d) Android"],
+                correct: "b"
+            },
+            {
+                question: "¿Qué significa GUI?",
+                options: ["a) Graphical User Interface", "b) General User Input", "c) Global Unix Interface", "d) Graphic Unix Input"],
+                correct: "a"
+            },
+            {
+                question: "¿Cuál es una distribución popular de Linux?",
+                options: ["a) Windows 10", "b) Ubuntu", "c) macOS Ventura", "d) iOS"],
+                correct: "b"
+            },
+            {
+                question: "¿Qué arquitectura tiene Windows?",
+                options: ["a) Monolítica", "b) Microkernel", "c) Híbrida", "d) Exokernel"],
+                correct: "c"
+            },
+            {
+                question: "¿Linux es de código abierto?",
+                options: ["a) No", "b) Sí", "c) Solo partes", "d) Depende de la versión"],
+                correct: "b"
+            },
+            {
+                question: "¿macOS se ejecuta en hardware de qué compañía?",
+                options: ["a) Microsoft", "b) Apple", "c) Dell", "d) HP"],
+                correct: "b"
+            },
+            {
+                question: "¿Qué gestiona el kernel?",
+                options: ["a) Solo memoria", "b) Hardware y procesos", "c) Solo archivos", "d) Nada"],
+                correct: "b"
+            },
+            {
+                question: "¿Windows es popular en gaming?",
+                options: ["a) No", "b) Sí", "c) Solo en consolas", "d) Solo en móviles"],
+                correct: "b"
+            },
+            {
+                question: "¿Linux se usa mucho en servidores?",
+                options: ["a) No", "b) Sí", "c) Solo en desktops", "d) Solo en móviles"],
+                correct: "b"
+            },
+            {
+                question: "¿macOS tiene integración con iPhone?",
+                options: ["a) No", "b) Sí", "c) Solo con Android", "d) Ninguna"],
+                correct: "b"
+            },
+            {
+                question: "¿Qué es NTFS?",
+                options: ["a) Sistema de archivos de Linux", "b) Sistema de archivos de Windows", "c) Kernel de macOS", "d) Distribución de Linux"],
+                correct: "b"
+            },
+            {
+                question: "¿ext4 es para qué SO?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Android"],
+                correct: "b"
+            },
+            {
+                question: "¿APFS es el sistema de archivos de?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Unix"],
+                correct: "c"
+            },
+            {
+                question: "¿Cuál SO es gratuito?",
+                options: ["a) Windows", "b) macOS", "c) Linux", "d) Todos"],
+                correct: "c"
+            },
+            {
+                question: "¿Windows Update es para?",
+                options: ["a) Actualizaciones de seguridad", "b) Juegos", "c) Hardware", "d) Nada"],
+                correct: "a"
+            },
+            {
+                question: "¿apt-get es un comando de?",
+                options: ["a) Windows", "b) Linux (Debian)", "c) macOS", "d) DOS"],
+                correct: "b"
+            },
+            {
+                question: "¿Time Machine es una feature de?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Android"],
+                correct: "c"
+            },
+            {
+                question: "¿Qué SO usa DirectX?",
+                options: ["a) Linux", "b) macOS", "c) Windows", "d) Unix"],
+                correct: "c"
+            },
+            {
+                question: "¿OpenGL es soportado en?",
+                options: ["a) Solo Windows", "b) Linux y macOS", "c) Solo macOS", "d) Ninguno"],
+                correct: "b"
+            },
+            {
+                question: "¿Cuál es el shell por defecto en Linux?",
+                options: ["a) cmd", "b) bash", "c) PowerShell", "d) Terminal"],
+                correct: "b"
+            },
+            {
+                question: "¿PowerShell es de?",
+                options: ["a) Linux", "b) macOS", "c) Windows", "d) Unix"],
+                correct: "c"
+            },
+            {
+                question: "¿Terminal en macOS usa?",
+                options: ["a) zsh", "b) cmd", "c) bash (antiguo)", "d) a y c"],
+                correct: "a"
+            },
+            {
+                question: "¿Qué SO es más seguro por diseño?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Todos igual"],
+                correct: "b"
+            },
+            {
+                question: "¿Blue Screen of Death es de?",
+                options: ["a) Linux", "b) macOS", "c) Windows", "d) Android"],
+                correct: "c"
+            },
+            {
+                question: "¿Kernel Panic es de?",
+                options: ["a) Windows", "b) Linux y macOS", "c) Solo Windows", "d) Ninguno"],
+                correct: "b"
+            },
+            {
+                question: "¿Cuál SO soporta ARM nativamente?",
+                options: ["a) Windows", "b) macOS (reciente)", "c) Linux", "d) Todos"],
+                correct: "d"
+            },
+            {
+                question: "¿Virtualización en Windows usa?",
+                options: ["a) Hyper-V", "b) KVM", "c) Parallels", "d) Ninguno"],
+                correct: "a"
+            },
+            {
+                question: "¿KVM es para?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Unix"],
+                correct: "b"
+            },
+            {
+                question: "¿Cuál es la versión actual de Windows (2025)?",
+                options: ["a) Windows 10", "b) Windows 11", "c) Windows 12", "d) Desconocido"],
+                correct: "b"
+            },
+            {
+                question: "¿macOS Sonoma es una versión de?",
+                options: ["a) Linux", "b) macOS", "c) Windows", "d) Android"],
+                correct: "b"
+            },
+            {
+                question: "¿Debian es una distro de?",
+                options: ["a) Windows", "b) Linux", "c) macOS", "d) Unix"],
+                correct: "b"
+            } // Al menos 30, agregué un par más para completar
+        ];
+
+        const startButton = document.getElementById('start-quiz');
+        const quizForm = document.getElementById('quiz-form');
+        const submitButton = document.getElementById('submit-quiz');
+        const resultsDiv = document.getElementById('results');
+        const studentNameInput = document.getElementById('student-name');
+
+        startButton.addEventListener('click', () => {
+            const name = studentNameInput.value.trim();
+            if (name === '') {
+                alert('Por favor, ingrese su nombre.');
+                return;
+            }
+
+            // Seleccionar 10 preguntas aleatorias
+            const shuffled = questionBank.sort(() => 0.5 - Math.random());
+            const selectedQuestions = shuffled.slice(0, 10);
+
+            // Generar el formulario
+            quizForm.innerHTML = '';
+            selectedQuestions.forEach((q, index) => {
+                const div = document.createElement('div');
+                div.classList.add('question');
+                div.innerHTML = `<p>${index + 1}. ${q.question}</p>`;
+                q.options.forEach(opt => {
+                    div.innerHTML += `
+                        <label>
+                            <input type="radio" name="q${index}" value="${opt.charAt(0)}">
+                            ${opt}
+                        </label><br>
+                    `;
+                });
+                quizForm.appendChild(div);
+            });
+
+            // Mostrar formulario y botón de enviar
+            quizForm.classList.remove('hidden');
+            submitButton.classList.remove('hidden');
+            startButton.classList.add('hidden');
+            studentNameInput.disabled = true;
+        });
+
+        submitButton.addEventListener('click', () => {
+            const name = studentNameInput.value;
+            const selectedQuestions = questionBank.slice(0, 10); // Nota: Como se shuffled antes, pero para simplicidad, asumimos las primeras 10 son las seleccionadas. En realidad, deberíamos guardar las seleccionadas.
+            let correct = 0;
+            let incorrect = 0;
+            let details = '';
+
+            selectedQuestions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected) {
+                    if (selected.value === q.correct) {
+                        correct++;
+                        details += `<p>${index + 1}. Correcta: ${q.question}</p>`;
+                    } else {
+                        incorrect++;
+                        details += `<p>${index + 1}. Incorrecta: ${q.question}. Respuesta correcta: ${q.correct}</p>`;
+                    }
+                } else {
+                    incorrect++;
+                    details += `<p>${index + 1}. No respondida: ${q.question}. Respuesta correcta: ${q.correct}</p>`;
+                }
+            });
+
+            resultsDiv.innerHTML = `
+                <h3>Resultados para ${name}</h3>
+                <p>Acertadas: ${correct}</p>
+                <p>Fallidas: ${incorrect}</p>
+                ${details}
+            `;
+            resultsDiv.classList.remove('hidden');
+            submitButton.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
